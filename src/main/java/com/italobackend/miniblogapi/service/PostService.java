@@ -41,7 +41,7 @@ public class PostService {
         Post postUpdated = postRepository.findById(id)
                 .orElseThrow(() -> new PostNaoEncontradoException("Post com o ID: " + id + " não encontrado para atualizar!"));
 
-        postUpdated.setAutor(postDto.titulo());
+        postUpdated.setTitulo(postDto.titulo());
         postUpdated.setConteudo(postDto.conteudo());
         postUpdated.setAutor(postDto.autor());
 
